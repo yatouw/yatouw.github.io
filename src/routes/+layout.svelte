@@ -32,8 +32,4 @@
   <!-- Main Content -->
   <slot />
   
-  <style>
-    #menu-toggle:focus ~ .menu-items {
-      display: block;
-    }
-  </style>
+  
