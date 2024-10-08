@@ -1,3 +1,124 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* Home */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 3rem;
+    background-color: #1f2937; 
+    min-height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: 4rem; 
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem; 
+    margin-bottom: 1.5rem;
+    color: #d1d5db; 
+  }
+  
+  .nav-bar {
+    background-color: #111827; 
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand-title {
+    font-size: 1.5rem; 
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #3b82f6;
+  }
+
+  .menu-toggle {
+    color: white;
+  }
+  
+  #menu-toggle:focus ~ .menu-items {
+    display: block;
+  }
+
+  /* About Me */
+  /* Contact */
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: #1f2937;
+    min-height: 100vh;
+  }
+  
+  .contact-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffffff; 
+  }
+  
+  .contact-description {
+    font-size: 1.125rem; 
+    color: #9ca3af; 
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+ 
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-link {
+    color: #9ca3af;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link.facebook:hover {
+    color: #3b82f6; 
+  }
+  
+  .social-link.tiktok:hover {
+    color: #ec4899; 
+  }
+  
+  .social-link.spotify:hover {
+    color: #10b981; 
+  }
+  
+  .social-link.discord:hover {
+    color: #8b5cf6; 
+  }
+  
+  .contact-info {
+    text-align: center;
+    color: #d1d5db; 
+  }
+  
+  .contact-link {
+    text-decoration: none;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline;
+  }
