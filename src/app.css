@@ -1,38 +1,61 @@
-@import "tailwindcss/base";
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');@import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Home */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 3rem;
+body {
+    font-family: 'Merriweather Sans', sans-serif;
     background-color: #1f2937; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.75;
+  }
+  
+  /* Home */
+  .hero-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: #1f2937;
     min-height: 100vh;
   }
   
   .hero-title {
-    font-size: 4rem; 
+    font-size: 3rem; 
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center; 
   }
   
   .hero-description {
     font-size: 1.125rem; 
     margin-bottom: 1.5rem;
     color: #d1d5db; 
+    text-align: center; 
   }
   
+  @media (min-width: 768px) {
+    .hero-section {
+      flex-direction: row; 
+      justify-content: end; 
+    }
+    .hero-title {
+      font-size: 4rem; 
+    }
+  }
+  
+ 
   .nav-bar {
     background-color: #111827; 
-    color: white;
-    padding: 1rem 0;
+    color: #ffffff;
+    padding: 1rem 0; 
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .brand-title {
@@ -41,19 +64,64 @@
   }
   
   .nav-link {
+    color: #ffffff;
+    font-family: 'Merriweather Sans', sans-serif;
     transition: color 0.3s ease;
   }
   
   .nav-link:hover {
-    color: #3b82f6;
-  }
-
-  .menu-toggle {
-    color: white;
+    color: #60a5fa; 
   }
   
-  #menu-toggle:focus ~ .menu-items {
-    display: block;
+  /* Responsive */
+  .menu-toggle {
+    color: #ffffff;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .menu-items {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-items {
+      display: block;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .menu-toggle:focus ~ .menu-items,
+    .menu-toggle:focus-within ~ .menu-items {
+      display: flex;
+    }
+  }
+  .hero-image-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    .hero-section {
+      flex-direction: row; 
+      justify-content: space-between; 
+      align-items: center;
+    }
+    .hero-title {
+      font-size: 4rem;
+    }
+    .hero-image-container {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
   }
 
   /* About Me */
