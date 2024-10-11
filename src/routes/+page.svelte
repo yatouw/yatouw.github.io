@@ -1,27 +1,38 @@
-<script>
+<script lang="ts">
   import dp from '$lib/assets/dp.jpg';
   import ecommerce1 from '$lib/assets/ecommerce1.png';
   import ecommerce2 from '$lib/assets/ecommerce2.png';
+  import cepa1 from '$lib/assets/cepa1.png';
+  import cepa2 from '$lib/assets/cepa2.png';
 
-  // Add project images
-  let projects = [
+  interface Project {
+    title: string;
+    description: string;
+    image: string[];
+    currentImageIndex: number;
+  }
+
+
+  let projects: Project[] = [
     {
       title: "E-Commerce Website",
       description: "A fully functional e-commerce site built with Angular and PHP.",
-      image: [ecommerce1, ecommerce2]
+      image: [ecommerce1, ecommerce2],
+      currentImageIndex: 0
     },
     {
       title: "CEPA Project",
-      description: "Community Extension Participation Attendance: A platform designed to streamline community event participation and enhance engagement through attendance tracking and event analytics.",
-      image: ""
+      description: "Community Extension Participation Attendance: A platform designed to streamline community event participation.",
+      image: [cepa1, cepa2],
+      currentImageIndex: 0
     }
   ];
 
-  let currentImageIndex = 0;
 
-  function toggleImage() {
-    currentImageIndex = (currentImageIndex + 1) % projects[0].image.length;
+  function toggleImage(index: number) {
+    projects[index].currentImageIndex = (projects[index].currentImageIndex + 1) % projects[index].image.length;
   }
+
 
 </script>
 
@@ -42,13 +53,13 @@
 <section class="projects-section">
   <h2 class="section-title">My Projects</h2>
   <div class="projects-grid">
-    {#each projects as project}
+    {#each projects as project, i}
       <div class="project-card">
-        <img src={project.image[currentImageIndex]} alt={project.title} class="project-image">
+        <img src={project.image[project.currentImageIndex]} alt={project.title} class="project-image">
         <h3 class="project-title">{project.title}</h3>
         <p class="project-description">{project.description}</p>
         {#if project.image.length > 1}
-          <button on:click={toggleImage} class="toggle-button">
+          <button on:click={() => toggleImage(i)} class="toggle-button">
             Next Image
           </button>
         {/if}
@@ -56,6 +67,7 @@
     {/each}
   </div>
 </section>
+
 <section class="skills-section">
   <h2 class="section-title">Skills</h2>
   <div class="skills-grid">
@@ -64,6 +76,5 @@
     <div class="skill">Svelte</div>
     <div class="skill">Angular</div>
     <div class="skill">PHP</div>
-    <div class="skill">Python</div>
   </div>
 </section>

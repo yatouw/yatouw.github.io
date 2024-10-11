@@ -1,10 +1,21 @@
 <section class="about-section">
   <h2 class="about-title">About Me</h2>
   <p class="about-description">
-    Hi, I'm Jayvee, a passionate BSIT student with a keen interest in building functional and visually appealing websites. I love turning ideas into reality through code, and I'm always exploring new technologies and tools to improve my skills. I specialize in creating responsive and dynamic web applications, with a focus on user experience and performance.
+    Hi, I'm Jayvee, a BSIT student passionate about creating functional and attractive websites. I enjoy turning ideas into reality with code and love exploring new technologies to improve my skills. I focus on building responsive web applications that provide a great user experience.
     <br><br>
-    When I'm not coding, I enjoy discovering new music, engaging with tech communities, and staying updated on the latest trends in web development. I'm also a problem-solver at heart and love taking on challenges that help me grow both personally and professionally.
+    Outside of coding, I like discovering new music, connecting with tech communities, and keeping up with the latest web development trends. I enjoy solving problems and taking on challenges that help me grow.
     <br><br>
-    I'm excited to continue my journey in the tech world and look forward to collaborating with like-minded individuals to create innovative and impactful projects. Let's connect and build something awesome together!
+    I'm excited to continue my journey in tech and look forward to working with others to create innovative projects. Let’s connect and build something amazing together!
   </p>
+
+  <div class="hobbies-interests">
+    <h3 class="hobbies-title">Hobbies & Interests</h3>
+    <ul class="hobbies-list">
+      <li>🎸 Rock music</li> 
+      <li>💻 Coding</li> 
+      <li>🎮 Gaming</li> 
+      <li>✈️ Traveling</li> 
+      <li>🎼 Guitar</li> 
+    </ul>
+  </div>
 </section>
